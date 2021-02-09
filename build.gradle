@@ -1,9 +1,6 @@
 import groovy.json.*
 
-plugins{
-    id 'org.jetbrains.kotlin.jvm' version '1.4.10'
-    id 'java'
-}
+apply plugin: 'java'
 
 sourceCompatibility = 1.8
 targetCompatibility = 14
@@ -16,13 +13,13 @@ repositories{
 def json = new JsonSlurper()
 
 ext{
-    mod = json.parseText(file("src/main/resources/mod.json").text)
+    mod = json.parseText(file("assets/mod.json").text)
 
     mindustryVersion = "v${mod['minGameVersion']}"
     modVersion = mod['version']
     sdkVersion = '30'
     sdkRoot = System.getenv("ANDROID_HOME")
-    archivesBaseName = "$project.name-$project.modVersion"
+    archivesBaseName = project.name + (!project.modVersion.isEmpty() ? "-$project.modVersion" : "")
 
     doExec = { cmd ->
         def proc = cmd.execute(null, new File("$buildDir/libs"))
