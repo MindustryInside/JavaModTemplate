@@ -15,4 +15,4 @@ Put `.jar` to one of these paths:
 
 After building, the `.jar` file should be located in `build/libs` folder.
 
-If the terminal returns Permission denied or Command not found, run `chmod +x ./gradlew`.
+If the terminal returns `Permission denied` or `Command not found`, run `chmod +x ./gradlew`.
