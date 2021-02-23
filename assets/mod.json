@@ -5,6 +5,7 @@
   "author": "",
   "main": "",
   "hidden": false,
+  "java": true,
   "version": "",
   "minGameVersion": 120
 }
