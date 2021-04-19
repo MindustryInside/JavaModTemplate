@@ -6,8 +6,8 @@ sourceCompatibility = 14
 targetCompatibility = 1.8
 
 sourceSets.main {
-    java.srcDir 'src'
-    resources.srcDir 'assets'
+    java.srcDirs = ['src']
+    resources.srcDirs = ['assets']
 }
 
 repositories {
@@ -18,20 +18,16 @@ repositories {
 ext {
     def json = new JsonSlurper()
     def libs = "$rootDir/build/libs"
-    def modfile = file("${sourceSets.main.resources.srcDirs.last()}/mod.json")
+    def modFile = file("${sourceSets.main.resources.srcDirs.last()}/mod.json")
+    def mod = json.parseText(modFile.text)
 
-    mod = json.parseText(modfile.text)
-    modName = mod['name']
-    modMindustryVersion = mod['minGameVersion']
-    modVersion = mod['version']
-
-    artifactBaseName = modName + (!modVersion.isEmpty() ? "-$modVersion" : "")
+    artifactBaseName = mod.name + (!mod.version.isEmpty() ? "-$mod.version" : "")
 
     jarPath = "$libs/${artifactBaseName}-desktop.jar"
     dexPath = "$libs/${artifactBaseName}-android.jar"
 
     versions = [:]
-    versions.mindustry = 'v' + modMindustryVersion
+    versions.mindustry = 'v' + mod.minGameVersion
     versions.jabel = '0.3.0'
 }
 
