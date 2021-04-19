@@ -1,11 +1,11 @@
 {
-  "name": "",
+  "name": "java-mod-template",
   "displayName": "",
   "description": "",
   "author": "",
   "main": "",
   "hidden": false,
   "java": true,
-  "version": "",
-  "minGameVersion": 120
+  "version": "1.0",
+  "minGameVersion": 126.2
 }
