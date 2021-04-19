@@ -1,7 +1,7 @@
 # Java Mod Template
 
 ## Building
-First, make sure you have JDK 14 installed. Then, run the following commands:
+First, make sure you have JDK 14 installed. Then, setup [mod.json](assets/mod.json) and run the following commands:
 
 ### Windows
 
