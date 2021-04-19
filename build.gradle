@@ -55,7 +55,7 @@ task desktop(type: Jar) {
 task android(type: Exec, dependsOn: desktop) {
     def command = [
         'd8', jarPath,
-        '--min-api', '19',
+        '--min-api', '28',
         '--output', dexPath
     ]
 
