@@ -1,18 +1,20 @@
-# BaseJavaMod
-
-## Installation
-Download the latest release (`.jar`) [here](). <br>
-Put `.jar` to one of these paths:
-* Windows: `%AppData%/Mindustry/mods`
-* Linux: `~/.local/share/Mindustry/mods` 
-* Server: `config/mods`
+# Java Mod Template
 
 ## Building
-* Windows: `gradlew jar`
-* Linux/Mac OS: `./gradlew jar`
-* Android: `gradlew androidJar` / `./gradlew androidJar`
-* Composite: `gradlew deploy` / `./gradlew deploy`
+First, make sure you have JDK 14 installed. Then, run the following commands:
 
-After building, the `.jar` file should be located in `build/libs` folder.
+### Windows
 
-If the terminal returns `Permission denied` or `Command not found`, run `chmod +x ./gradlew`.
+* Desktop only: `gradlew desktop`
+* Desktop & Android: `gradlew dist`
+
+### *nix/Mac OS
+
+* Desktop only: `./gradlew desktop`
+* Desktop & Android: `./gradlew dist`
+
+Note that Android build requires Android `build-tools` >= `28`
+
+### Troubleshooting
+
+* If the terminal returns `Permission denied` or `Command not found`, run `chmod +x ./gradlew`.
