@@ -69,10 +69,9 @@ task dist(type: Jar, dependsOn: android) {
 }
 
 tasks.withType(JavaCompile) {
-    options.compilerArgs = [
-            '--release', '8',
-            '--enable-preview',
-    ]
+    if (JavaVersion.current() != JavaVersion.VERSION_1_8){
+        options.compilerArgs = ['--release', '8', '--enable-preview']
+    }
 
     options.compilerArgs << '-Xplugin:jabel'
 
