@@ -46,6 +46,8 @@ task desktop(type: Jar) {
             it.isDirectory() ? it : zipTree(it)
         }
     }
+
+    with jar
 }
 
 task android(type: Exec, dependsOn: desktop) {
