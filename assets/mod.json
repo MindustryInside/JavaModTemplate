@@ -1,9 +1,9 @@
 {
   "name": "java-mod-template",
-  "displayName": "",
-  "description": "",
-  "author": "",
-  "main": "",
+  "displayName": "Java Mod Template",
+  "description": "A template for Java mods for Mindustry.",
+  "author": "Mindustry Inside",
+  "main": "inside.Template",
   "hidden": false,
   "java": true,
   "version": "1.0",
