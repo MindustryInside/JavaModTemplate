@@ -7,5 +7,6 @@
   "hidden": false,
   "java": true,
   "version": "1.0",
-  "minGameVersion": 126.2
+  "minGameVersion": 126.2,
+  "repo": "MindustryInside/JavaModTemplate"
 }
